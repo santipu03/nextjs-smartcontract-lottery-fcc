@@ -1,4 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hardhat Smart Contract Lottery
+
+This project is a part of the Hardhat FreeCodeCamp video.
+
+_[ :movie_camera: FreeCodeCamp video](https://www.youtube.com/watch?v=gyMwXuJrbJQ&t)_
+
+If you want to know more about this project go to the FreeCodeCamp original repo
+
+_[ :classical_building: FreeCodeCamp original repo](https://github.com/PatrickAlphaC/nextjs-smartcontract-lottery-fcc)_
+
+Check the smart contract deployed with this project in the Goerli Testnet!
+
+_[ :information_source:	 Contract deployed](https://goerli.etherscan.io/address/0x46F9530bF699EF8E1658036090eEf4Fd245Fb9C0)_
+
+
+
 
 ## Getting Started
 
