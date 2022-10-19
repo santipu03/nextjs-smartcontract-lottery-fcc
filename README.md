@@ -13,6 +13,13 @@ Check the smart contract deployed with this project in the Goerli Testnet!
 _[ :information_source:	 Contract deployed](https://goerli.etherscan.io/address/0x46F9530bF699EF8E1658036090eEf4Fd245Fb9C0)_
 
 
+## Demo
+
+Check the live page of this project
+
+_[ :spider_web: Live Demo Fleeek](https://hidden-firefly-7534.on.fleek.co/)_
+
+
 
 
 ## Getting Started
