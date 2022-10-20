@@ -81,31 +81,46 @@ export default function LotteryEntrance() {
 
     return (
         <div className="p-10">
-            Hi from lotttery entrance!
             {raffleAddress ? (
                 <div>
-                    <button
-                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                        onClick={async function () {
-                            await enterRaffle({
-                                onSuccess: handleSuccess,
-                                onError: (error) => console.log(error),
-                            })
-                        }}
-                        disabled={isLoading || isFetching}
-                    >
-                        {isLoading || isFetching ? (
-                            <div className="animate-spin spinner-border h-8 w-8 border-b-2 rounded-full"></div>
-                        ) : (
-                            <div>Enter Raffle</div>
-                        )}
-                    </button>
-                    <div>Entrance Fee: {ethers.utils.formatUnits(entranceFee, "ether")}</div>
-                    <div>The current number of players is: {numPlayers}</div>
-                    <div>The previous winner was: {recentWinner}</div>
+                    <div className="flex justify-center items-center">
+                        <button
+                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold h-12 w-32 flex justify-center items-center px-4 rounded mt-10"
+                            onClick={async function () {
+                                await enterRaffle({
+                                    onSuccess: handleSuccess,
+                                    onError: (error) => console.log(error),
+                                })
+                            }}
+                            disabled={isLoading || isFetching}
+                        >
+                            {isLoading || isFetching ? (
+                                <div className="animate-spin spinner-border h-8 w-8 border-b-2 rounded-full"></div>
+                            ) : (
+                                <div>Enter Raffle</div>
+                            )}
+                        </button>
+                    </div>
+                    <div className="my-16 justify-center gap-32 text-center flex">
+                        <div className="border-2 p-5 flex flex-col rounded-lg">
+                            Entrance Fee: <b>{ethers.utils.formatUnits(entranceFee, "ether")}</b>
+                        </div>
+                        <div className="border-2 p-5 flex flex-col rounded-lg">
+                            Current number of players: <b>{numPlayers}</b>
+                        </div>
+                        <div className="border-2 rounded-lg p-5 flex flex-col">
+                            Previous winner:{" "}
+                            <b>
+                                {recentWinner.slice(0, 6)}...
+                                {recentWinner.slice(recentWinner.length - 4)}
+                            </b>
+                        </div>
+                    </div>
                 </div>
             ) : (
-                <div>No Raffle Address Detected</div>
+                <div className="m-14 text-center font-bold">
+                    Connect your wallet to enter the Raffle!
+                </div>
             )}
         </div>
     )
